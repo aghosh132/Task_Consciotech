@@ -1,25 +1,22 @@
-import logo from './logo.svg';
-import './App.css';
+import "./App.css";
+import Dropdown from "./components/Dropdown";
+import navLinksData from "./data.json";
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className='App'>
+      <div className='header-parent'>
+        <header className='header' style={{marginLeft:450}}>
+        
+          <Dropdown navLinksData={navLinksData} />
+        </header>
+      </div>
+      <body>
+        <main className='main-content'>
+          <h1 className='heading'>TASK CONSCIOTECH</h1>
+        </main>
+      </body>
     </div>
   );
 }
-
 export default App;
